@@ -1,5 +1,6 @@
 package com.photoshare.controler;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -8,8 +9,9 @@ import com.photoshare.model.User;
 public class UpdateUser extends DBconnect {
 	private User user;
 	
-	public UpdateUser(User user){
+	public UpdateUser(User user,Connection conn){
 		this.setUser(user);
+		this.setConnection(conn);
 	}
 
 	public User getUser() {
@@ -20,7 +22,7 @@ public class UpdateUser extends DBconnect {
 		this.user = user;
 	}
 	
-	public void updatePassword(User user){
+	public void updatePassword(){
 		PreparedStatement statement = null;
 		try{
 			statement=this.getConnection().prepareStatement("UPDATE user SET password=md5(?) where name=?");
@@ -40,7 +42,7 @@ public class UpdateUser extends DBconnect {
 		}
 	}
 	
-	public void updateInfo(User user){
+	public void updateInfo(){
 		PreparedStatement statement = null;
 		try{
 			statement=this.getConnection().prepareStatement("UPDATE user SET info=? where name=?");
@@ -60,7 +62,7 @@ public class UpdateUser extends DBconnect {
 		}
 	}
 	
-	public void updatePostCount(User user){
+	public void updatePostCount(){
 		PreparedStatement statement = null;
 		try{
 			statement=this.getConnection().prepareStatement("UPDATE user SET post_count=? where name=?");
@@ -80,7 +82,7 @@ public class UpdateUser extends DBconnect {
 		}
 	}
 	
-	public void updateLastLogin(User user){
+	public void updateLastLogin(){
 		PreparedStatement statement = null;
 		try{
 			statement=this.getConnection().prepareStatement("UPDATE user SET last_login=? where name=?");

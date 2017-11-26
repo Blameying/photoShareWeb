@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.photoshare.model.User;
+
 public class CheckUser extends DBconnect {
 	private String name;
 	private String password;
@@ -15,8 +17,14 @@ public class CheckUser extends DBconnect {
 		this.setConnection(conn);
 	}
 	
-	public boolean check(){
-		boolean flag=false;
+	public CheckUser(User user,Connection conn){
+		this.name=user.getName();
+		this.password=user.getPassword();
+		this.setConnection(conn);
+	}
+	
+	public int check(){
+		int flag=0;
 		PreparedStatement statement=null;
 		
 		try {
@@ -25,15 +33,15 @@ public class CheckUser extends DBconnect {
 			ResultSet result=statement.executeQuery();
 			if(result.next()){
 				if(result.getString("password").equals(this.password)){
-					flag=true;
+					flag=1;
 				}
 				else{
-					flag=false;
+					flag=-1;
 				}
 			}
 			else
 			{
-				flag=false;
+				flag=0;
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

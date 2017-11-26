@@ -1,5 +1,6 @@
 package com.photoshare.controler;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -8,8 +9,9 @@ import com.photoshare.model.User;
 public class RigesterUser extends DBconnect {
 	private User user;
 
-	public RigesterUser(User user){
+	public RigesterUser(User user,Connection conn){
 		this.user=user;
+		this.setConnection(conn);
 		register(this.user);
 	}
 	
