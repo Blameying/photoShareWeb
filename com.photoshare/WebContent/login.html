@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登陆</title>
+<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>  
+<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.min.js"></script>  
+</head>
+<body>
+
+<form action="http://localhost:9999/com.photoshare/Login" method="post" onsubmit="document.getElementById('password').value=md5(document.getElementById('password').value)">  
+            用户：<input type="text" name="username" id="username"/><br/>  
+            密码：<input type="password" name="password" id="password"/><br/>  
+            
+            <input type="submit" value="登录" />  
+              
+</form>  
+</body>
+</html>
