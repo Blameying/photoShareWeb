@@ -3,7 +3,7 @@
  * @Descriptions: 首页js依赖文件
  * @Date: 2017-11-26 20:01:16 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-17 16:37:56
+ * @Last Modified time: 2017-12-17 17:35:23
  */
 
 //import scss
@@ -13,7 +13,7 @@ require("./index.scss");
 require("../js/jquery.backstretch.js");
 require("../js/iconfont.js");
 
-(function() {
+$(function() {
     // img 依赖
     const jpg1 = require("./img/banner1.jpg");
     const jpg2 = require("./img/banner2.jpg");
@@ -63,4 +63,4 @@ require("../js/iconfont.js");
             $(".mask-layer").hide();
         });
     });
-})();
+});

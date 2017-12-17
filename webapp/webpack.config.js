@@ -3,7 +3,7 @@
  * @Descriptions: 图片分享网站前端webpack配置文件
  * @Date: 2017-11-26 19:49:52 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-11-26 20:15:49
+ * @Last Modified time: 2017-12-17 17:43:48
  * **************************************************************************************
  * 本文件仅适用于开发环境 ，最终生成的打包文件输出在./dist目录下，你可以根据自己的需求自行设置
  * 开始开发
@@ -46,6 +46,7 @@ module.exports = {
 
     entry: {
         index: "./src/index/index.js",
+        photoClass: "./src/photoClass/photoClass.js",
         modernizr: "./src/js/modernizr-2.6.2.min.js"
     },
 
@@ -145,6 +146,14 @@ module.exports = {
             template: "src/index/index.html", //网页原型
             filename: "./index.html", // 登陆
             chunks: ["modernizr", "index", "module_bind"]
+            //favicon: "src/img/favicon.ico"
+        }),
+
+        new HtmlWebpackPlugin({
+            showErrors: false,
+            template: "src/photoClass/photoClass.html", //网页原型
+            filename: "./photoClass.html", // 登陆
+            chunks: ["modernizr", "photoClass", "module_bind"]
             //favicon: "src/img/favicon.ico"
         })
     ]
