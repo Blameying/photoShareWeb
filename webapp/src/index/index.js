@@ -3,7 +3,7 @@
  * @Descriptions: 首页js依赖文件
  * @Date: 2017-11-26 20:01:16 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-17 12:14:47
+ * @Last Modified time: 2017-12-17 16:37:56
  */
 
 //import scss
@@ -26,5 +26,41 @@ require("../js/iconfont.js");
         fade: 750,
         scale: "fade",
         alwaysTestWindowResolution: true
+    });
+
+    //点击显示登录界面
+    $(".user-name").click(function() {
+        $(".login-container").show();
+        $(".mask-layer").show();
+
+        //点击切换登录界面
+        $(".login").click(function() {
+            $(this).addClass("doing");
+            $(".regist").removeClass("doing");
+
+            $("#regist-content").hide();
+            $("#login-content").show();
+        });
+
+        //点击切换注册界面
+        $(".regist").click(function() {
+            $(this).addClass("doing");
+            $(".login").removeClass("doing");
+
+            $("#login-content").hide();
+            $("#regist-content").show();
+        });
+
+        //点击遮罩层返回
+        $(".mask-layer").click(function() {
+            $(".login-container").hide();
+            $(".mask-layer").hide();
+        });
+
+        //点击取消按钮返回
+        $(".return").click(function() {
+            $(".login-container").hide();
+            $(".mask-layer").hide();
+        });
     });
 })();
