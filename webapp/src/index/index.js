@@ -3,7 +3,7 @@
  * @Descriptions: 首页js依赖文件
  * @Date: 2017-11-26 20:01:16 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-15 00:59:17
+ * @Last Modified time: 2017-12-17 10:57:40
  */
 
 //import scss
@@ -23,7 +23,7 @@ require("../js/jquery.backstretch.js");
 
     // Handle Backstretch 背景轮换
     jQuery.backstretch([jpg1, jpg2, jpg3, jpg4], {
-        duration: 5000,
+        duration: 10000,
         fade: 750,
         scale: "fade",
         alwaysTestWindowResolution: true

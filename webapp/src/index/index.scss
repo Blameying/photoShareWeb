@@ -3,28 +3,25 @@
  * @Descriptions: 首页js样式文件
  * @Date: 2017-11-26 20:01:37 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-15 00:36:17
+ * @Last Modified time: 2017-12-17 11:10:23
  */
 
 @import "../scss/normalize.css";
-body {
-    background: #ff7f50;
-}
 
 #navbar {
     width: 100%;
     height: 50px;
-    >.navbar-container {
+    > .navbar-container {
         width: 1350px;
         height: 50px;
         margin: 0 auto;
-        >.navbar-left {
+        > .navbar-left {
             width: 800px;
             height: 50px;
             float: left;
-            >.navbar-list {
+            > .navbar-list {
                 float: left;
-                >.navbar-item {
+                > .navbar-item {
                     float: left;
                     width: 100px;
                     height: 50px;
@@ -36,11 +33,11 @@ body {
                     a {
                         color: #fff;
                     }
-                    >.photo-class-list {
+                    > .photo-class-list {
                         display: none;
                         position: relative;
                         animation: 5s infinite;
-                        >.photo-class {
+                        > .photo-class {
                             width: 150px;
                             height: 35px;
                             line-height: 35px;
@@ -48,19 +45,19 @@ body {
                             background: rgba(0, 0, 0, 0.5);
                             text-align: center;
                         }
-                        >.photo-class:hover {
+                        > .photo-class:hover {
                             background: rgba(0, 0, 0, 0.8);
                         }
                     }
                 }
-                >.photo-class-nav:hover {
+                > .photo-class-nav:hover {
                     .photo-class-list {
                         display: inline-block;
                     }
                 }
             }
         }
-        >.navbar-right {
+        > .navbar-right {
             float: right;
             width: 150px;
             height: 50px;
@@ -68,12 +65,21 @@ body {
             .user-name {
                 color: #fff;
                 font-size: 16px;
+                vertical-align: middle;
             }
             .user-img {
+                display: none;
                 width: 40px;
                 height: 40px;
-                margin-left: 15px;
                 border-radius: 20px;
+                margin-left: 15px;
+                vertical-align: middle;
+            }
+
+            .default-img {
+                width: 60px;
+                height: 50px;
+                border-radius: 25px;
                 vertical-align: middle;
             }
         }
@@ -83,14 +89,14 @@ body {
 #content {
     width: 1350px;
     margin: 0 auto;
-    >.logo {
+    > .logo {
         width: 600px;
         height: 100px;
         margin-top: 70px;
         margin-bottom: 60px;
         background: url("./img/logo.png") no-repeat -37px center transparent;
     }
-    >.search-container {
+    > .search-container {
         width: 655px;
         margin-left: 33px;
         input {
