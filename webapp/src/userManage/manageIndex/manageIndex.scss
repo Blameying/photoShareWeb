@@ -3,7 +3,7 @@
  * @Descriptions: 用户管理界面样式表
  * @Date: 2017-12-17 23:20:34 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-18 00:30:07
+ * @Last Modified time: 2017-12-18 10:13:46
  */
 
 @import url("../../scss/normalize.css");
@@ -38,6 +38,7 @@
                     > .photo-class-list {
                         display: none;
                         position: relative;
+                        z-index: 2;
                         animation: 5s infinite;
                         > .photo-class {
                             width: 150px;
@@ -130,6 +131,7 @@
 
         > .sidebar {
             position: absolute;
+            z-index: 1;
             top: 0;
             left: -210px;
             width: 200px;
