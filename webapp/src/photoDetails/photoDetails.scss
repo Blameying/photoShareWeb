@@ -3,7 +3,7 @@
  * @Descriptions: 单张图片浏览页面样式文件
  * @Date: 2017-12-17 20:42:18 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-17 22:31:50
+ * @Last Modified time: 2017-12-18 15:44:32
  */
 
 @import url("../scss/normalize.css");
@@ -44,11 +44,11 @@
                             height: 35px;
                             line-height: 35px;
                             border-bottom: 1px solid #fff;
-                            background: rgba(0, 0, 0, 0.5);
+                            background: rgba(72, 138, 145, 0.5);
                             text-align: center;
                         }
                         > .photo-class:hover {
-                            background: rgba(0, 0, 0, 0.8);
+                            background: rgba(72, 138, 145, 0.8);
                         }
                     }
                 }
