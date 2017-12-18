@@ -3,7 +3,7 @@
  * @Descriptions: 图片分享网站前端webpack配置文件
  * @Date: 2017-11-26 19:49:52 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-18 11:35:27
+ * @Last Modified time: 2017-12-18 16:23:12
  * **************************************************************************************
  * 本文件仅适用于开发环境 ，最终生成的打包文件输出在./dist目录下，你可以根据自己的需求自行设置
  * 开始开发
@@ -52,6 +52,7 @@ module.exports = {
         photoCheck: "./src/userManage/photoCheck/photoCheck.js",
         photoLook: "./src/userManage/photoLook/photoLook.js",
         photoUpload: "./src/userManage/photoUpLoad/photoUpload.js",
+        personalInfo: "./src/userManage/personalInfo/personalInfo.js",
         modernizr: "./src/js/modernizr-2.6.2.min.js"
     },
 
