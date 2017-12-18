@@ -3,7 +3,7 @@
  * @Descriptions: 图片审核页面样式文件
  * @Date: 2017-12-18 00:47:23 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-18 10:49:11
+ * @Last Modified time: 2017-12-18 17:54:44
  */
 
 @import url("../../scss/normalize.css");
@@ -11,7 +11,7 @@
 #photo-check-content {
     width: 910px;
     height: 815px;
-    padding: 30px 20px 50px;
+    padding: 30px 20px 0;
 
     > .title {
         display: block;

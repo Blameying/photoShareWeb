@@ -3,7 +3,7 @@
  * @Descriptions: 用户管理界面页面依赖文件
  * @Date: 2017-12-17 23:19:45 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-18 16:34:45
+ * @Last Modified time: 2017-12-18 17:50:36
  */
 
 //import css
@@ -37,6 +37,11 @@ $(function() {
             url: "/personalInfo",
             javascript: "js/personalInfo.js",
             css: "css/personalInfo.css"
+        },
+        {
+            url: "/changePassword",
+            javascript: "js/changePassword.js",
+            css: "css/changePassword.css"
         }
     ];
 

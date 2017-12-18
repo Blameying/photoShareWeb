@@ -3,7 +3,7 @@
  * @Descriptions: 个人信息界面样式文件
  * @Date: 2017-12-18 16:18:54 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-18 17:00:08
+ * @Last Modified time: 2017-12-18 17:54:30
  */
 
 @import url("../../scss/normalize.css");
@@ -11,7 +11,7 @@
 #personal-info {
     width: 910px;
     height: 815px;
-    padding: 30px 20px 50px;
+    padding: 30px 20px 0;
 
     > .title {
         display: block;
