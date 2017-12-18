@@ -3,7 +3,7 @@
  * @Descriptions: 用户管理界面页面依赖文件
  * @Date: 2017-12-17 23:19:45 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-18 01:04:07
+ * @Last Modified time: 2017-12-18 10:58:13
  */
 
 //import css
@@ -22,6 +22,11 @@ $(function() {
             url: "/photoCheck",
             javascript: "js/photoCheck.js",
             css: "css/photoCheck.css"
+        },
+        {
+            url: "/photoLook",
+            javascript: "js/photoLook.js",
+            css: "css/photoLook.css"
         }
     ];
 
