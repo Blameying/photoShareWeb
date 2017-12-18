@@ -3,7 +3,7 @@
  * @Descriptions: 用户管理界面样式表
  * @Date: 2017-12-17 23:20:34 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-18 15:42:11
+ * @Last Modified time: 2017-12-18 21:05:06
  */
 
 @import url("../../scss/normalize.css");
@@ -129,7 +129,7 @@
             background: #fff;
         }
 
-        > .sidebar {
+        > #sidebar {
             position: absolute;
             z-index: 1;
             top: 0;
@@ -159,6 +159,13 @@
             }
 
             .sidebar-item:hover {
+                a {
+                    background: #3498db;
+                    color: #fff;
+                }
+            }
+
+            .active {
                 a {
                     background: #3498db;
                     color: #fff;

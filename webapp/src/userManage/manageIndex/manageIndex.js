@@ -3,7 +3,7 @@
  * @Descriptions: 用户管理界面页面依赖文件
  * @Date: 2017-12-17 23:19:45 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-18 17:50:36
+ * @Last Modified time: 2017-12-18 21:23:25
  */
 
 //import css
@@ -58,4 +58,21 @@ $(function() {
 
     // 初始化路由
     spaRouters.init();
+
+    /**页面初始化
+     *
+     */
+
+    //添加sider点击事件
+    const sidebarList = $("#sidebar").find(".sidebar-item");
+
+    sidebarList.each(function() {
+        $(this).click(function() {
+            console.log(11);
+            $("#sidebar")
+                .find(".active")
+                .removeClass("active");
+            $(this).addClass("active");
+        });
+    });
 });
