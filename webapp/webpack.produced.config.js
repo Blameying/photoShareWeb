@@ -3,7 +3,7 @@
  * @Descriptions: 图片分享网站前端webpack配置文件
  * @Date: 2017-12-18 19:49:52 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-18 21:29:42
+ * @Last Modified time: 2017-12-22 12:30:00
  * **************************************************************************************
  * 本文件仅适用于最终文件发布 ，最终生成的打包文件输出在./dist目录下，你可以根据自己的需求自行设置
  * 开始开发
@@ -105,8 +105,6 @@ module.exports = {
         ]
     },
 
-    devtool: "cheap-module-eval-source-map", //映射代码，方便调试开发
-
     plugins: [
         // 自动补全css属性中的浏览器前缀
         new webpack.LoaderOptionsPlugin({
@@ -133,19 +131,20 @@ module.exports = {
         new ExtractTextPlugin("css/[name].css"), //打包css文件
         new CleanwebpackPlugin(["dist"]), //更新前清理dist目录
 
-        new OptimizeCssAssetsPlugin({
-            cssProcessorOptions: {
-                discardComments: {
-                    removeAll: true
-                }
-            },
-            canPrint: false
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            output: {
-                comments: false
-            }
-        }),
+        //代码压缩
+        // new OptimizeCssAssetsPlugin({
+        //     cssProcessorOptions: {
+        //         discardComments: {
+        //             removeAll: true
+        //         }
+        //     },
+        //     canPrint: false
+        // }),
+        // new webpack.optimize.UglifyJsPlugin({
+        //     output: {
+        //         comments: false
+        //     }
+        // }),
 
         new HtmlWebpackPlugin({
             showErrors: false,
