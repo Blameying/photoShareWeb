@@ -1,5 +1,6 @@
-webpackJsonp([8],[
-/* 0 */
+webpackJsonp([7],{
+
+/***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10259,7 +10260,8 @@ return jQuery;
 
 
 /***/ }),
-/* 1 */
+
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10320,16 +10322,8 @@ return jQuery;
 })(window);
 
 /***/ }),
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */
+
+/***/ 39:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10337,26 +10331,42 @@ return jQuery;
 
 /*
  * @Author: zhouyou@weruan 
- * @Descriptions: 单张图片浏览界面js依赖文件
- * @Date: 2017-12-17 20:43:42 
+ * @Descriptions: 用户管理界面(无路由)
+ * @Date: 2017-12-23 11:04:16 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-17 21:07:32
+ * @Last Modified time: 2017-12-23 11:44:06
  */
 
-//import css
-__webpack_require__(12);
+//import scss
+__webpack_require__(40);
 
 //import js
 __webpack_require__(1);
 
-$(function () {});
+$(function () {
+    //添加sider点击事件
+    var sidebarList = $("#sidebar").find(".sidebar-item");
+
+    sidebarList.each(function () {
+        $(this).click(function () {
+            $("#sidebar").find(".active").removeClass("active");
+            $(this).addClass("active");
+
+            //界面显示
+            $("#content").find(".active").removeClass("active");
+            $("#" + $(this).attr("data-type")).addClass("active");
+        });
+    });
+});
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 12 */
+
+/***/ 40:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ })
-],[11]);
+
+},[39]);
