@@ -563,23 +563,23 @@ ul {
  * @Descriptions: 用户管理界面(无路由)
  * @Date: 2017-12-23 11:06:29 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-23 11:41:54
+ * @Last Modified time: 2017-12-25 13:40:36
  */
 #navbar {
   width: 100%;
   height: 50px;
   background: url(../img/nav_bg.png) no-repeat left center; }
-  #navbar > .navbar-container {
+  #navbar .navbar-container {
     width: 100%;
     height: 50px; }
-    #navbar > .navbar-container > .navbar-left {
+    #navbar .navbar-container .navbar-left {
       width: 400px;
       height: 50px;
       float: left;
       margin-left: 50px; }
-      #navbar > .navbar-container > .navbar-left > .navbar-list {
+      #navbar .navbar-container .navbar-left .navbar-list {
         float: left; }
-        #navbar > .navbar-container > .navbar-left > .navbar-list > .navbar-item {
+        #navbar .navbar-container .navbar-left .navbar-list .navbar-item {
           float: left;
           width: 80px;
           height: 50px;
@@ -588,37 +588,37 @@ ul {
           color: #fff;
           text-align: center;
           line-height: 50px; }
-          #navbar > .navbar-container > .navbar-left > .navbar-list > .navbar-item a {
+          #navbar .navbar-container .navbar-left .navbar-list .navbar-item a {
             color: #fff; }
-          #navbar > .navbar-container > .navbar-left > .navbar-list > .navbar-item > .photo-class-list {
+          #navbar .navbar-container .navbar-left .navbar-list .navbar-item .photo-class-list {
             display: none;
             position: relative;
             z-index: 2;
             -webkit-animation: 5s infinite;
             animation: 5s infinite; }
-            #navbar > .navbar-container > .navbar-left > .navbar-list > .navbar-item > .photo-class-list > .photo-class {
+            #navbar .navbar-container .navbar-left .navbar-list .navbar-item .photo-class-list .photo-class {
               width: 150px;
               height: 35px;
               line-height: 35px;
               border-bottom: 1px solid #fff;
               background: rgba(72, 138, 145, 0.5);
               text-align: center; }
-            #navbar > .navbar-container > .navbar-left > .navbar-list > .navbar-item > .photo-class-list > .photo-class:hover {
+            #navbar .navbar-container .navbar-left .navbar-list .navbar-item .photo-class-list .photo-class:hover {
               background: rgba(72, 138, 145, 0.8); }
-        #navbar > .navbar-container > .navbar-left > .navbar-list > .photo-class-nav:hover .photo-class-list {
+        #navbar .navbar-container .navbar-left .navbar-list .photo-class-nav:hover .photo-class-list {
           display: inline-block; }
-    #navbar > .navbar-container > .navbar-search {
+    #navbar .navbar-container .navbar-search {
       display: inline-block;
       width: 400px;
       height: 50px;
       line-height: 50px; }
-      #navbar > .navbar-container > .navbar-search .search {
+      #navbar .navbar-container .navbar-search .search {
         width: 275px;
         height: 29px;
         padding-right: 25px;
         background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAAXNSR0IArs4c6QAAAk1JREFUWAntl71LQlEYxr0qTjWItDjV0iItZRA0RHvhVFBThKiIgmP9BTVHiIpQk0RORWuUW0E05dIf4JaTi+JHzwPHuKZdz9Ujt+G8cPB8vO99f/e5577n6nJp0wpoBbQCWgGtgFbA5TJmJUIymZzrdrtHaBHkCKEF0L7Qqm63+w7tOpvNNjC2bW7bERIBiURiv91ufwJ40zCMC4SsBYPBef5yzHmu00/ickMuypWOx+OnyBLt9Xp7hULhfSijmIjFYqu4gTKGxXw+f/aX36h5pUoL5aI+n2/DCpggXKcfulG7iitTmnuYjxwQO+OACd03Ko7+g9frXZbd48qU5kuH5BU7wAQX/hURz6mxphI6gj1aGptxhAPjAM0qI2XKoJEthJfvTSrrLycRx7IoZSqhAyhrrMO2TcSxjkuZMmg84nqtVpNObKYTcdI3rAwaj/gD4GEzjGzf4/Gsw7cq668MGsD3AD+UTWz263Q6BzzazXNWfWXQUOsKibZF3bXKObAm/Lf4LTKwYDFQBi0OhjQUL6fT6QWLnD9L9KM/gDOyBwuDlUHzYjiWWfL8zWbzdZziXG+1Wi/wL+ZyuVvGy5qyYzyVSi0B4gnKnaPVcVhcAuIR/RLrMMsaqwTGYbH3uSUydoF5Y0qgzcD4YsvxwuJb5BjdXbQVND8ay9rU39NTQ48CBthMbSpoJ4CpxsTQTgFPDO0k8ETQTgPbhv4PwLag8T9uEbX3mXW4X9Z4ASfMK5sUwA0cBic4DG5kY7SfVkAroBXQCmgFtAKzVOAbyNoCZUL6f5UAAAAASUVORK5CYII=) no-repeat right center #fff;
         background-size: 35px 35px; }
-    #navbar > .navbar-container > .navbar-right {
+    #navbar .navbar-container .navbar-right {
       float: right;
       width: 120px;
       height: 50px;
@@ -626,18 +626,18 @@ ul {
       line-height: 50px;
       background: rgba(123, 200, 130, 0.7);
       margin-right: 50px; }
-      #navbar > .navbar-container > .navbar-right .user-name {
+      #navbar .navbar-container .navbar-right .user-name {
         color: #fff;
         font-size: 16px;
         vertical-align: middle; }
-      #navbar > .navbar-container > .navbar-right .user-img {
+      #navbar .navbar-container .navbar-right .user-img {
         display: none;
         width: 40px;
         height: 40px;
         border-radius: 20px;
         margin-left: 15px;
         vertical-align: middle; }
-      #navbar > .navbar-container > .navbar-right .default-img {
+      #navbar .navbar-container .navbar-right .default-img {
         width: 60px;
         height: 50px;
         border-radius: 25px;
@@ -648,25 +648,25 @@ ul {
   height: 875px;
   padding-top: 20px;
   background: #f2f2f2; }
-  #operation-content > .container {
+  #operation-content .container {
     position: relative;
     width: 950px;
     height: 875px;
     margin: 0 auto; }
-    #operation-content > .container > #content {
+    #operation-content .container #content {
       width: 950px;
       height: 855px;
       border-radius: 10px;
       background: #fff; }
-      #operation-content > .container > #content .active {
+      #operation-content .container #content .active {
         display: block; }
-    #operation-content > .container > #sidebar {
+    #operation-content .container #sidebar {
       position: absolute;
       z-index: 1;
       top: 0;
       left: -210px;
       width: 200px; }
-      #operation-content > .container > #sidebar .sidebar-item {
+      #operation-content .container #sidebar .sidebar-item {
         width: 200px;
         height: 40px;
         margin-bottom: 5px;
@@ -675,17 +675,17 @@ ul {
         font-size: 15px;
         font-weight: bold;
         line-height: 40px; }
-        #operation-content > .container > #sidebar .sidebar-item a {
+        #operation-content .container #sidebar .sidebar-item a {
           display: inline-block;
           width: 100%;
           color: #667d94;
           border-radius: 2px; }
-        #operation-content > .container > #sidebar .sidebar-item span {
+        #operation-content .container #sidebar .sidebar-item span {
           margin-left: 30px; }
-      #operation-content > .container > #sidebar .sidebar-item:hover a {
+      #operation-content .container #sidebar .sidebar-item:hover a {
         background: #3498db;
         color: #fff; }
-      #operation-content > .container > #sidebar .active a {
+      #operation-content .container #sidebar .active a {
         background: #3498db;
         color: #fff; }
 
@@ -694,7 +694,7 @@ ul {
   width: 910px;
   height: 815px;
   padding: 30px 20px 0; }
-  #photo-check-content > .title {
+  #photo-check-content .title {
     display: block;
     height: 60px;
     width: 880px;
@@ -702,58 +702,58 @@ ul {
     margin-bottom: 0;
     border-bottom: 1px solid #dddcdc;
     font-size: 28px; }
-  #photo-check-content > .container {
+  #photo-check-content .container {
     width: 910px; }
-    #photo-check-content > .container > .photo-info {
+    #photo-check-content .container .photo-info {
       width: 910px;
       height: 150px;
       border-bottom: 1px solid #dddcdc; }
-      #photo-check-content > .container > .photo-info > .photo-class {
+      #photo-check-content .container .photo-info .photo-class {
         position: relative;
         float: left;
         width: 70px;
         height: 100%;
         color: #8f8e8e;
         font-size: 14px; }
-        #photo-check-content > .container > .photo-info > .photo-class span {
+        #photo-check-content .container .photo-info .photo-class span {
           position: absolute;
           top: 10px; }
-      #photo-check-content > .container > .photo-info > .photo-name {
+      #photo-check-content .container .photo-info .photo-name {
         float: left;
         width: 100px;
         height: 90px;
         padding-top: 60px;
         font-size: 16px;
         font-weight: bold; }
-      #photo-check-content > .container > .photo-info > .photo-description {
+      #photo-check-content .container .photo-info .photo-description {
         float: left;
         width: 640px;
         height: 150px; }
-        #photo-check-content > .container > .photo-info > .photo-description > .photo {
+        #photo-check-content .container .photo-info .photo-description .photo {
           display: inline-block;
           width: 140px;
           height: 120px;
           padding-top: 30px;
           text-align: center; }
-          #photo-check-content > .container > .photo-info > .photo-description > .photo img {
+          #photo-check-content .container .photo-info .photo-description .photo img {
             width: 100px;
             height: 100px;
             vertical-align: middle; }
-        #photo-check-content > .container > .photo-info > .photo-description > .photo-description-content {
+        #photo-check-content .container .photo-info .photo-description .photo-description-content {
           display: inline-block;
           width: 490px;
           height: 150px;
           color: #8f8e8e; }
-      #photo-check-content > .container > .photo-info .check {
+      #photo-check-content .container .photo-info .check {
         display: inline-block;
         width: 100px;
         height: 150px;
         cursor: pointer; }
-        #photo-check-content > .container > .photo-info .check > .pass {
+        #photo-check-content .container .photo-info .check .pass {
           margin-top: 40px;
           font-size: 14px;
           color: #0099ff; }
-        #photo-check-content > .container > .photo-info .check > .nopass {
+        #photo-check-content .container .photo-info .check .nopass {
           margin-top: 30px;
           font-size: 14px;
           color: #fd0000; }
@@ -763,7 +763,7 @@ ul {
   width: 910px;
   height: 815px;
   padding: 30px 20px 0; }
-  #photo-look-content > .title {
+  #photo-look-content .title {
     display: block;
     height: 60px;
     width: 880px;
@@ -771,63 +771,63 @@ ul {
     margin-bottom: 0;
     border-bottom: 1px solid #dddcdc;
     font-size: 28px; }
-  #photo-look-content > .container {
+  #photo-look-content .container {
     width: 910px; }
-    #photo-look-content > .container > .photo-info {
+    #photo-look-content .container .photo-info {
       width: 910px;
       height: 150px;
       border-bottom: 1px solid #dddcdc; }
-      #photo-look-content > .container > .photo-info > .photo-class {
+      #photo-look-content .container .photo-info .photo-class {
         position: relative;
         float: left;
         width: 70px;
         height: 100%;
         color: #8f8e8e;
         font-size: 14px; }
-        #photo-look-content > .container > .photo-info > .photo-class span {
+        #photo-look-content .container .photo-info .photo-class span {
           position: absolute;
           top: 10px; }
-      #photo-look-content > .container > .photo-info > .photo-name {
+      #photo-look-content .container .photo-info .photo-name {
         float: left;
         width: 100px;
         height: 90px;
         padding-top: 60px;
         font-size: 16px;
         font-weight: bold; }
-      #photo-look-content > .container > .photo-info > .photo-description {
+      #photo-look-content .container .photo-info .photo-description {
         float: left;
         width: 640px;
         height: 150px; }
-        #photo-look-content > .container > .photo-info > .photo-description > .photo {
+        #photo-look-content .container .photo-info .photo-description .photo {
           display: inline-block;
           width: 140px;
           height: 120px;
           padding-top: 30px;
           text-align: center; }
-          #photo-look-content > .container > .photo-info > .photo-description > .photo img {
+          #photo-look-content .container .photo-info .photo-description .photo img {
             width: 100px;
             height: 100px;
             vertical-align: middle; }
-        #photo-look-content > .container > .photo-info > .photo-description > .photo-description-content {
+        #photo-look-content .container .photo-info .photo-description .photo-description-content {
           display: inline-block;
           width: 490px;
           height: 150px;
           color: #8f8e8e; }
-      #photo-look-content > .container > .photo-info .check {
+      #photo-look-content .container .photo-info .check {
         display: inline-block;
         width: 100px;
         height: 150px;
         font-size: 14px;
         cursor: pointer; }
-        #photo-look-content > .container > .photo-info .check div {
+        #photo-look-content .container .photo-info .check div {
           margin-top: 20px; }
-        #photo-look-content > .container > .photo-info .check > .pass {
+        #photo-look-content .container .photo-info .check .pass {
           color: #66cc33; }
-        #photo-look-content > .container > .photo-info .check > .nopass {
+        #photo-look-content .container .photo-info .check .nopass {
           color: #fd0000; }
-        #photo-look-content > .container > .photo-info .check > .checking {
+        #photo-look-content .container .photo-info .check .checking {
           color: #0099ff; }
-        #photo-look-content > .container > .photo-info .check > .delete {
+        #photo-look-content .container .photo-info .check .delete {
           font-size: 16px;
           margin-top: 80px; }
 
@@ -836,7 +836,7 @@ ul {
   width: 910px;
   height: 815px;
   padding: 30px 20px 0; }
-  #photo-upload-content > .title {
+  #photo-upload-content .title {
     display: block;
     height: 60px;
     width: 880px;
@@ -844,44 +844,44 @@ ul {
     margin-bottom: 0;
     border-bottom: 1px solid #dddcdc;
     font-size: 28px; }
-  #photo-upload-content > .container {
+  #photo-upload-content .container {
     width: 910px;
     height: 755px; }
-    #photo-upload-content > .container > .row {
+    #photo-upload-content .container .row {
       width: 910px;
       border-bottom: 1px solid #dddcdc; }
-    #photo-upload-content > .container .operation {
+    #photo-upload-content .container .operation {
       float: left;
       width: 100px;
       font-size: 16px;
       text-align: center; }
-    #photo-upload-content > .container > .upload {
+    #photo-upload-content .container .upload {
       height: 150px; }
-      #photo-upload-content > .container > .upload .operation {
+      #photo-upload-content .container .upload .operation {
         height: 150px;
         line-height: 150px; }
-      #photo-upload-content > .container > .upload > .content {
+      #photo-upload-content .container .upload .content {
         float: right;
         width: 800px; }
-        #photo-upload-content > .container > .upload > .content > .photo {
+        #photo-upload-content .container .upload .content .photo {
           float: left;
           width: 150px;
           height: 130px;
           padding-top: 20px;
           line-height: 150px; }
-          #photo-upload-content > .container > .upload > .content > .photo img {
+          #photo-upload-content .container .upload .content .photo img {
             width: 100px;
             height: 100px; }
-        #photo-upload-content > .container > .upload > .content > .upload-photo {
+        #photo-upload-content .container .upload .content .upload-photo {
           float: left;
           width: 300px;
           height: 110px;
           padding-top: 40px; }
-          #photo-upload-content > .container > .upload > .content > .upload-photo span {
+          #photo-upload-content .container .upload .content .upload-photo span {
             display: inline-block;
             width: 300px;
             height: 25px; }
-          #photo-upload-content > .container > .upload > .content > .upload-photo > .file {
+          #photo-upload-content .container .upload .content .upload-photo .file {
             width: 100px;
             height: 30px;
             margin-top: 10px;
@@ -892,39 +892,39 @@ ul {
             text-align: center;
             border-radius: 5px;
             cursor: pointer; }
-            #photo-upload-content > .container > .upload > .content > .upload-photo > .file input {
+            #photo-upload-content .container .upload .content .upload-photo .file input {
               position: absolute;
               opacity: 0; }
-    #photo-upload-content > .container > .photo-name {
+    #photo-upload-content .container .photo-name {
       height: 100px;
       line-height: 100px; }
-      #photo-upload-content > .container > .photo-name .operation {
+      #photo-upload-content .container .photo-name .operation {
         height: 100px;
         line-height: 100px; }
-      #photo-upload-content > .container > .photo-name #user-name {
+      #photo-upload-content .container .photo-name #user-name {
         width: 250px;
         height: 30px;
         border: 1px solid #dddcdc; }
-    #photo-upload-content > .container > .photo-class {
+    #photo-upload-content .container .photo-class {
       height: 100px;
       line-height: 100px; }
-      #photo-upload-content > .container > .photo-class .operation {
+      #photo-upload-content .container .photo-class .operation {
         height: 100px;
         line-height: 100px; }
-      #photo-upload-content > .container > .photo-class #class {
+      #photo-upload-content .container .photo-class #class {
         width: 250px;
         height: 30px;
         font-size: 16px; }
-    #photo-upload-content > .container > .photo-description {
+    #photo-upload-content .container .photo-description {
       height: 200px;
       line-height: 200px; }
-      #photo-upload-content > .container > .photo-description .operation {
+      #photo-upload-content .container .photo-description .operation {
         height: 200px;
         line-height: 200px; }
-      #photo-upload-content > .container > .photo-description textarea {
+      #photo-upload-content .container .photo-description textarea {
         margin-top: 25px;
         border: 1px solid #dddcdc; }
-    #photo-upload-content > .container #upload {
+    #photo-upload-content .container #upload {
       float: right;
       width: 140px;
       height: 40px;
@@ -941,7 +941,7 @@ ul {
   width: 910px;
   height: 815px;
   padding: 30px 20px 0; }
-  #personal-info > .title {
+  #personal-info .title {
     display: block;
     height: 60px;
     width: 880px;
@@ -949,53 +949,53 @@ ul {
     margin-bottom: 0;
     border-bottom: 1px solid #dddcdc;
     font-size: 28px; }
-  #personal-info > .container {
+  #personal-info .container {
     width: 910px;
     height: 755px; }
-    #personal-info > .container > .row {
+    #personal-info .container .row {
       width: 910px;
       height: 100px;
       border-bottom: 1px solid #dddcdc;
       line-height: 100px; }
-      #personal-info > .container > .row input {
+      #personal-info .container .row input {
         width: 250px;
         height: 30px;
         border: 1px solid #dddcdc; }
-    #personal-info > .container .operation {
+    #personal-info .container .operation {
       float: left;
       width: 100px;
       height: 100px;
       font-size: 16px;
       text-align: center;
       line-height: 100px; }
-    #personal-info > .container > .upload {
+    #personal-info .container .upload {
       height: 150px;
       line-height: 25px; }
-      #personal-info > .container > .upload .operation {
+      #personal-info .container .upload .operation {
         height: 150px;
         line-height: 150px; }
-      #personal-info > .container > .upload > .content {
+      #personal-info .container .upload .content {
         float: right;
         width: 800px; }
-        #personal-info > .container > .upload > .content > .photo {
+        #personal-info .container .upload .content .photo {
           float: left;
           width: 150px;
           height: 130px;
           padding-top: 20px;
           line-height: 150px; }
-          #personal-info > .container > .upload > .content > .photo img {
+          #personal-info .container .upload .content .photo img {
             width: 100px;
             height: 100px; }
-        #personal-info > .container > .upload > .content > .upload-photo {
+        #personal-info .container .upload .content .upload-photo {
           float: left;
           width: 300px;
           height: 110px;
           padding-top: 40px; }
-          #personal-info > .container > .upload > .content > .upload-photo span {
+          #personal-info .container .upload .content .upload-photo span {
             display: inline-block;
             width: 300px;
             height: 25px; }
-          #personal-info > .container > .upload > .content > .upload-photo > .file {
+          #personal-info .container .upload .content .upload-photo .file {
             width: 100px;
             height: 30px;
             margin-top: 10px;
@@ -1006,10 +1006,10 @@ ul {
             text-align: center;
             border-radius: 5px;
             cursor: pointer; }
-            #personal-info > .container > .upload > .content > .upload-photo > .file input {
+            #personal-info .container .upload .content .upload-photo .file input {
               position: absolute;
               opacity: 0; }
-    #personal-info > .container #upload {
+    #personal-info .container #upload {
       float: right;
       width: 140px;
       height: 40px;
@@ -1026,7 +1026,7 @@ ul {
   width: 910px;
   height: 815px;
   padding: 30px 20px 0; }
-  #change-password > .title {
+  #change-password .title {
     display: block;
     height: 60px;
     width: 880px;
@@ -1034,26 +1034,26 @@ ul {
     margin-bottom: 0;
     border-bottom: 1px solid #dddcdc;
     font-size: 28px; }
-  #change-password > .container {
+  #change-password .container {
     width: 910px;
     height: 755px; }
-    #change-password > .container > .row {
+    #change-password .container .row {
       width: 910px;
       height: 100px;
       border-bottom: 1px solid #dddcdc;
       line-height: 100px; }
-      #change-password > .container > .row input {
+      #change-password .container .row input {
         width: 250px;
         height: 30px;
         border: 1px solid #dddcdc; }
-    #change-password > .container .operation {
+    #change-password .container .operation {
       float: left;
       width: 100px;
       height: 100px;
       font-size: 16px;
       text-align: center;
       line-height: 100px; }
-    #change-password > .container #commit {
+    #change-password .container #commit {
       float: right;
       width: 140px;
       height: 40px;

@@ -3,7 +3,7 @@
  * @Descriptions: 用户管理界面(无路由)
  * @Date: 2017-12-23 11:06:29 
  * @Last Modified by: zhouyou@weruan
- * @Last Modified time: 2017-12-23 11:41:54
+ * @Last Modified time: 2017-12-25 13:40:36
  */
 
 @import url("../scss/normalize.css");
@@ -13,17 +13,17 @@
     height: 50px;
     background: url("../image/nav_bg.png") no-repeat left center;
 
-    > .navbar-container {
+    .navbar-container {
         width: 100%;
         height: 50px;
-        > .navbar-left {
+        .navbar-left {
             width: 400px;
             height: 50px;
             float: left;
             margin-left: 50px;
-            > .navbar-list {
+            .navbar-list {
                 float: left;
-                > .navbar-item {
+                .navbar-item {
                     float: left;
                     width: 80px;
                     height: 50px;
@@ -35,12 +35,12 @@
                     a {
                         color: #fff;
                     }
-                    > .photo-class-list {
+                    .photo-class-list {
                         display: none;
                         position: relative;
                         z-index: 2;
                         animation: 5s infinite;
-                        > .photo-class {
+                        .photo-class {
                             width: 150px;
                             height: 35px;
                             line-height: 35px;
@@ -48,12 +48,12 @@
                             background: rgba(72, 138, 145, 0.5);
                             text-align: center;
                         }
-                        > .photo-class:hover {
+                        .photo-class:hover {
                             background: rgba(72, 138, 145, 0.8);
                         }
                     }
                 }
-                > .photo-class-nav:hover {
+                .photo-class-nav:hover {
                     .photo-class-list {
                         display: inline-block;
                     }
@@ -61,7 +61,7 @@
             }
         }
 
-        > .navbar-search {
+        .navbar-search {
             display: inline-block;
             width: 400px;
             height: 50px;
@@ -77,7 +77,7 @@
             }
         }
 
-        > .navbar-right {
+        .navbar-right {
             float: right;
             width: 120px;
             height: 50px;
@@ -116,13 +116,13 @@
     padding-top: 20px;
     background: rgba(242, 242, 242, 1);
 
-    > .container {
+    .container {
         position: relative;
         width: 950px;
         height: 875px;
         margin: 0 auto;
 
-        > #content {
+        #content {
             width: 950px;
             height: 855px;
             border-radius: 10px;
@@ -133,7 +133,7 @@
             }
         }
 
-        > #sidebar {
+        #sidebar {
             position: absolute;
             z-index: 1;
             top: 0;
@@ -185,7 +185,7 @@
     height: 815px;
     padding: 30px 20px 0;
 
-    > .title {
+    .title {
         display: block;
         height: 60px;
         width: 880px;
@@ -195,15 +195,15 @@
         font-size: 28px;
     }
 
-    > .container {
+    .container {
         width: 910px;
 
-        > .photo-info {
+        .photo-info {
             width: 910px;
             height: 150px;
             border-bottom: 1px solid #dddcdc;
 
-            > .photo-class {
+            .photo-class {
                 position: relative;
                 float: left;
                 width: 70px;
@@ -217,7 +217,7 @@
                 }
             }
 
-            > .photo-name {
+            .photo-name {
                 float: left;
                 width: 100px;
                 height: 90px;
@@ -226,12 +226,12 @@
                 font-weight: bold;
             }
 
-            > .photo-description {
+            .photo-description {
                 float: left;
                 width: 640px;
                 height: 150px;
 
-                > .photo {
+                .photo {
                     display: inline-block;
                     width: 140px;
                     height: 120px;
@@ -245,7 +245,7 @@
                     }
                 }
 
-                > .photo-description-content {
+                .photo-description-content {
                     display: inline-block;
                     width: 490px;
                     height: 150px;
@@ -259,13 +259,13 @@
                 height: 150px;
                 cursor: pointer;
 
-                > .pass {
+                .pass {
                     margin-top: 40px;
                     font-size: 14px;
                     color: #0099ff;
                 }
 
-                > .nopass {
+                .nopass {
                     margin-top: 30px;
                     font-size: 14px;
                     color: rgb(253, 0, 0);
@@ -281,7 +281,7 @@
     height: 815px;
     padding: 30px 20px 0;
 
-    > .title {
+    .title {
         display: block;
         height: 60px;
         width: 880px;
@@ -291,15 +291,15 @@
         font-size: 28px;
     }
 
-    > .container {
+    .container {
         width: 910px;
 
-        > .photo-info {
+        .photo-info {
             width: 910px;
             height: 150px;
             border-bottom: 1px solid #dddcdc;
 
-            > .photo-class {
+            .photo-class {
                 position: relative;
                 float: left;
                 width: 70px;
@@ -313,7 +313,7 @@
                 }
             }
 
-            > .photo-name {
+            .photo-name {
                 float: left;
                 width: 100px;
                 height: 90px;
@@ -322,12 +322,12 @@
                 font-weight: bold;
             }
 
-            > .photo-description {
+            .photo-description {
                 float: left;
                 width: 640px;
                 height: 150px;
 
-                > .photo {
+                .photo {
                     display: inline-block;
                     width: 140px;
                     height: 120px;
@@ -341,7 +341,7 @@
                     }
                 }
 
-                > .photo-description-content {
+                .photo-description-content {
                     display: inline-block;
                     width: 490px;
                     height: 150px;
@@ -360,19 +360,19 @@
                     margin-top: 20px;
                 }
 
-                > .pass {
+                .pass {
                     color: #66cc33;
                 }
 
-                > .nopass {
+                .nopass {
                     color: rgb(253, 0, 0);
                 }
 
-                > .checking {
+                .checking {
                     color: #0099ff;
                 }
 
-                > .delete {
+                .delete {
                     font-size: 16px;
                     margin-top: 80px;
                 }
@@ -386,7 +386,7 @@
     width: 910px;
     height: 815px;
     padding: 30px 20px 0;
-    > .title {
+    .title {
         display: block;
         height: 60px;
         width: 880px;
@@ -395,10 +395,10 @@
         border-bottom: 1px solid #dddcdc;
         font-size: 28px;
     }
-    > .container {
+    .container {
         width: 910px;
         height: 755px;
-        > .row {
+        .row {
             width: 910px;
             border-bottom: 1px solid #dddcdc;
         }
@@ -408,16 +408,16 @@
             font-size: 16px;
             text-align: center;
         }
-        > .upload {
+        .upload {
             height: 150px;
             .operation {
                 height: 150px;
                 line-height: 150px;
             }
-            > .content {
+            .content {
                 float: right;
                 width: 800px;
-                > .photo {
+                .photo {
                     float: left;
                     width: 150px;
                     height: 130px;
@@ -428,7 +428,7 @@
                         height: 100px;
                     }
                 }
-                > .upload-photo {
+                .upload-photo {
                     float: left;
                     width: 300px;
                     height: 110px;
@@ -438,7 +438,7 @@
                         width: 300px;
                         height: 25px;
                     }
-                    > .file {
+                    .file {
                         width: 100px;
                         height: 30px;
                         margin-top: 10px;
@@ -458,7 +458,7 @@
                 }
             }
         }
-        > .photo-name {
+        .photo-name {
             height: 100px;
             line-height: 100px;
 
@@ -474,7 +474,7 @@
             }
         }
 
-        > .photo-class {
+        .photo-class {
             height: 100px;
             line-height: 100px;
 
@@ -490,7 +490,7 @@
             }
         }
 
-        > .photo-description {
+        .photo-description {
             height: 200px;
             line-height: 200px;
 
@@ -526,7 +526,7 @@
     height: 815px;
     padding: 30px 20px 0;
 
-    > .title {
+    .title {
         display: block;
         height: 60px;
         width: 880px;
@@ -536,11 +536,11 @@
         font-size: 28px;
     }
 
-    > .container {
+    .container {
         width: 910px;
         height: 755px;
 
-        > .row {
+        .row {
             width: 910px;
             height: 100px;
             border-bottom: 1px solid #dddcdc;
@@ -562,17 +562,17 @@
             line-height: 100px;
         }
 
-        > .upload {
+        .upload {
             height: 150px;
             line-height: 25px;
             .operation {
                 height: 150px;
                 line-height: 150px;
             }
-            > .content {
+            .content {
                 float: right;
                 width: 800px;
-                > .photo {
+                .photo {
                     float: left;
                     width: 150px;
                     height: 130px;
@@ -583,7 +583,7 @@
                         height: 100px;
                     }
                 }
-                > .upload-photo {
+                .upload-photo {
                     float: left;
                     width: 300px;
                     height: 110px;
@@ -593,7 +593,7 @@
                         width: 300px;
                         height: 25px;
                     }
-                    > .file {
+                    .file {
                         width: 100px;
                         height: 30px;
                         margin-top: 10px;
@@ -634,7 +634,7 @@
     width: 910px;
     height: 815px;
     padding: 30px 20px 0;
-    > .title {
+    .title {
         display: block;
         height: 60px;
         width: 880px;
@@ -644,11 +644,11 @@
         font-size: 28px;
     }
 
-    > .container {
+    .container {
         width: 910px;
         height: 755px;
 
-        > .row {
+        .row {
             width: 910px;
             height: 100px;
             border-bottom: 1px solid #dddcdc;
