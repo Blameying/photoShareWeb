@@ -1,20 +1,22 @@
 package com.photoshare.view;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
 import java.sql.Timestamp;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.photoshare.controler.BuildConnection;
 import com.photoshare.controler.CheckUser;
 import com.photoshare.controler.GetUser;
 import com.photoshare.controler.UpdateUser;
 import com.photoshare.model.User;
+
+import net.sf.json.JSONObject;
 
 /**
  * Servlet implementation class Login
@@ -36,48 +38,46 @@ public class Login extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String name = request.getParameter("username");
+		String name = request.getParameter("account");
 		String password = request.getParameter("password");
-		BuildConnection build =new BuildConnection("jdbc:mysql://localhost:3306/photoweb", "root", "nihao@@");
-		CheckUser check=new CheckUser(name,password,build.getConnection());
+		Connection conn = (Connection)request.getSession().getAttribute("connection");
+		CheckUser check=new CheckUser(name,password,conn);
 		int flag=check.check();
 		if(flag==1){
 			User user=new User();
 			user.setName(name);
-			new GetUser(user,build.getConnection());
+			new GetUser(user,conn);
 	        //返回html页面  
-			request.setAttribute("user", user);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/userinfo.jsp");
-			dispatcher.forward(request, response); 
+			request.getSession().setAttribute("user", user);
+			request.getSession().setAttribute("connection", conn);
 			//更新上次登陆时间
 			Timestamp now = new Timestamp(System.currentTimeMillis());
 			user.setLast_login(now);
-			UpdateUser updateuser=new UpdateUser(user,build.getConnection());
+			UpdateUser updateuser=new UpdateUser(user,conn);
 			updateuser.updateLastLogin();
+			response.setCharacterEncoding("UTF-8");
+			response.setContentType("application/json; charset=utf-8"); 
+			JSONObject data = new JSONObject();
+			data.put("success", true);
+			data.put("message", "登陆成功！");
+			PrintWriter out=response.getWriter();
+			out.println(data);
 		}else if(flag==-1){
-			response.setContentType("text/html;charset=GB18030");  
-	          
-	        //返回html页面  
-	        response.getWriter().println("<html>");  
-	        response.getWriter().println("<head>");     
-	        response.getWriter().println("<title>登录信息</title>");      
-	        response.getWriter().println("</head>");    
-	        response.getWriter().println("<body>");     
-	        response.getWriter().println("密码错误");    
-	        response.getWriter().println("</body>");    
-	        response.getWriter().println("</html>"); 
+			response.setCharacterEncoding("UTF-8");
+			response.setContentType("application/json; charset=utf-8"); 
+			JSONObject data = new JSONObject();
+			data.put("success", false);
+			data.put("message", "密码错误！");
+			PrintWriter out=response.getWriter();
+			out.println(data);
 		}else{
-			response.setContentType("text/html;charset=GB18030");  
-	          
-	        //返回html页面  
-	        response.getWriter().println("<html>");  
-	        response.getWriter().println("<head>");     
-	        response.getWriter().println("<title>登录信息</title>");      
-	        response.getWriter().println("</head>");    
-	        response.getWriter().println("<body>");     
-	        response.getWriter().println("该用户不存在");    
-	        response.getWriter().println("</body>");    
-	        response.getWriter().println("</html>"); 
+			response.setCharacterEncoding("UTF-8");
+			response.setContentType("application/json; charset=utf-8"); 
+			JSONObject data = new JSONObject();
+			data.put("success", false);
+			data.put("message", "该用户不存在！！");
+			PrintWriter out=response.getWriter();
+			out.println(data);
 		}
 	}
 

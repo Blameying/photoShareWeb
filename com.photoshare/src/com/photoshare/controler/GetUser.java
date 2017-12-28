@@ -27,7 +27,7 @@ public class GetUser extends DBconnect {
 	public void query(){
 		PreparedStatement statement = null;
 		try{
-			statement=this.getConnection().prepareStatement("select * from user where name=?");
+			statement=this.getConnection().prepareStatement("select * from user where user.name=?");
 			statement.setString(1, this.user.getName());
 			ResultSet result = statement.executeQuery();
 			if(result.next()){
@@ -35,6 +35,7 @@ public class GetUser extends DBconnect {
 				this.user.setPost_count(result.getInt("post_count"));
 				this.user.setBuildtime(result.getTimestamp("buildtime"));
 				this.user.setLast_login(result.getTimestamp("last_login"));
+				this.user.setTemp_count(result.getInt("temp_count"));
 			}
 		}catch(SQLException e){
 			e.printStackTrace();

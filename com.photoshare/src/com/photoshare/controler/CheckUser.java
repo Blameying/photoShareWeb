@@ -28,7 +28,7 @@ public class CheckUser extends DBconnect {
 		PreparedStatement statement=null;
 		
 		try {
-			statement=this.getConnection().prepareStatement("select * from user where name = ?");
+			statement=this.getConnection().prepareStatement("select * from user where user.name = ?");
 			statement.setString(1, name);
 			ResultSet result=statement.executeQuery();
 			if(result.next()){

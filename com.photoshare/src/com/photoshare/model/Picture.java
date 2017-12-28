@@ -12,6 +12,7 @@ public class Picture {
 	private String description;
 	private String md5;
 	private File picfile;
+	private boolean test;
 	//标签
 	private String table;
 	
@@ -86,4 +87,13 @@ public class Picture {
 	public void setPicfile(File picfile) {
 		this.picfile = picfile;
 	}
+
+	public boolean isTest() {
+		return test;
+	}
+
+	public void setTest(boolean test) {
+		this.test = test;
+	}
+	
 }

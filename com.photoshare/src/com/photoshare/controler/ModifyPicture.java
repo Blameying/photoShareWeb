@@ -32,9 +32,30 @@ public class ModifyPicture extends DBconnect {
 	public void modify(Picture picture,String description){
 		PreparedStatement statement = null;
 		try{
-			statement=this.getConnection().prepareStatement("UPDATE picture SET description=? "+
-					"where id=?");
+			statement=this.getConnection().prepareStatement("UPDATE picture SET picture.description=? "+
+					"where picture.id=?");
 			statement.setString(1, description);
+			statement.setInt(2, picture.getId());
+			statement.executeUpdate();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally{
+			try {
+				if(statement!=null)
+					statement.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	//审核通过
+	public void allow(Picture picture){
+		PreparedStatement statement = null;
+		try{
+			statement=this.getConnection().prepareStatement("UPDATE picture SET test=? "+
+					"where id=?");
+			statement.setInt(1, 1);
 			statement.setInt(2, picture.getId());
 			statement.executeUpdate();
 		}catch(SQLException e){

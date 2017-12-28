@@ -24,7 +24,7 @@ public class DeletePicture extends DBconnect {
 	public void delete(Picture picture){
 		PreparedStatement statement = null;
 		try{
-			statement=this.getConnection().prepareStatement("delete from picture where id=?");
+			statement=this.getConnection().prepareStatement("delete from picture where picture.id=?");
 			statement.setInt(1, picture.getId());
 			statement.executeUpdate();
 		}catch(SQLException e){

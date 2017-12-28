@@ -10,6 +10,7 @@ public class User {
 	private int post_count;
 	private Timestamp last_login;
 	private Timestamp buildtime;
+	private int temp_count;
 	
 	public int getId() {
 		return id;
@@ -52,5 +53,11 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public int getTemp_count() {
+		return temp_count;
+	}
+	public void setTemp_count(int temp_count) {
+		this.temp_count = temp_count;
 	}
 }

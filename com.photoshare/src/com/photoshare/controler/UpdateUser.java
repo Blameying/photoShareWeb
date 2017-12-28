@@ -101,4 +101,24 @@ public class UpdateUser extends DBconnect {
 			}
 		}
 	}
+	
+	public void updateTempCount(){
+		PreparedStatement statement = null;
+		try{
+			statement=this.getConnection().prepareStatement("UPDATE user SET temp_count=? where name=?");
+			statement.setInt(1, this.user.getTemp_count());
+			statement.setString(2, this.user.getName());
+			statement.executeUpdate();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally{
+			try {
+				if(statement!=null)
+					statement.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
 }
