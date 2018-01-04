@@ -21,13 +21,15 @@ public class UploadPicture extends DBconnect {
 		PreparedStatement statement = null;
 		try{
 			statement=this.getConnection().prepareStatement("INSERT INTO picture "
-					+ "(format,username,picname,description,md5)"
-					+ " values(?,?,?,?,?)");
+					+ "(picture.format,picture.username,picture.picname,picture.description,"
+					+"picture.md5,picture.table)"
+					+ " values(?,?,?,?,?,?)");
 			statement.setString(1, this.picture.getFormat());
 			statement.setString(2, this.picture.getUsername());
 			statement.setString(3, this.picture.getPicname());
 			statement.setString(4, this.picture.getDescription());
 			statement.setString(5, this.picture.getMd5());
+			statement.setString(6, this.picture.getTable());
 			statement.executeUpdate();
 		}catch(SQLException e){
 			e.printStackTrace();

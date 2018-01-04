@@ -16,7 +16,7 @@ public class GetPicture extends DBconnect {
 		try{
 			statement=this.getConnection().prepareStatement("SELECT * "
 					+"FROM picture " 
-					+"where picture.id=? and picture.test=1");
+					+"where picture.id=?");
 			statement.setInt(1, id);
 			ResultSet result=statement.executeQuery();
 			Picture picture=null;

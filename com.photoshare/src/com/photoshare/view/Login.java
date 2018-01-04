@@ -38,6 +38,7 @@ public class Login extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println("login success!");
 		String name = request.getParameter("account");
 		String password = request.getParameter("password");
 		Connection conn = (Connection)request.getSession().getAttribute("connection");

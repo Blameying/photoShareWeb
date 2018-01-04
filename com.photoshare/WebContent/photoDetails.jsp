@@ -32,6 +32,7 @@
 			ID=0;
 		}
 		GetPicture getter=new GetPicture();
+		getter.setConnection(conn);
 		pic=getter.getPictureById(ID);
 	%>
     <header id="navbar">
@@ -39,7 +40,7 @@
             <div class="navbar-left">
                 <ul class="navbar-list">
                     <li class="navbar-item">
-                        <a href="">首页</a>
+                        <a href="./index.jsp">首页</a>
                     </li>
                     <li class="navbar-item photo-class-nav">
                         <a href="">图片分类</a>
@@ -95,15 +96,15 @@
                 <a href="javascript:;" class="user-name">登录</a>
                 <img src="img/login.png" alt="默认头像" title="默认头像" class="default-img">
             <%}else{%>
-            	<a href="./userManage.jsp">
+            	<a class="user-photo" href="./userManageCombine.jsp" style="display:inline-block; width:150px; height:50px;">
             	<%
-            		String path="image/"+user.getName()+"/head/user.jpg";
+            	String path=this.getServletContext().getRealPath("/")+"images/"+user.getName()+"/head/user.jpg";
             		File file = new File(path);
             		if(file.exists()){
             	%>
-                <img src="image/<%=user.getName()%>/head/user.jpg" alt="用户头像" title="用户头像" class="user-img">
+                <img src="images/<%=user.getName()%>/head/user.jpg" alt="用户头像" title="用户头像" class="user-img" style="display:inline-block;">
                 <%}else{ %>
-                <img src="img/user.jpg" alt="用户头像" title="用户头像" class="user-img">
+                <img src="img/user.jpg" alt="用户头像" title="用户头像" class="user-img" style="display:inline-block;">
                 <%} %>
                 </a>
             <%}%>
@@ -124,7 +125,7 @@
                 <span class="photo-name"><%=pic.getPicname()%></span>
             </div>
             <div class="photo-container">
-                <img src="image/<%=pic.getUsername()%>/<%=pic.getMd5()%>.<%=pic.getFormat()%>" alt="图片 <%=pic.getPicname() %>">
+                <img src="images/<%=pic.getUsername()%>/<%=pic.getMd5()+'.'+pic.getFormat()%>" alt="图片 <%=pic.getPicname() %>">
             </div>
             <div class="photo-information">
                 <header class="photo-info">
@@ -141,7 +142,6 @@
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-icondownload"></use>
                         </svg>
-                        <span class="download-times">8，173</span>下载
                     </div>
                 </header>
                 <section class="photo-description">
@@ -153,7 +153,6 @@
                     <img src="img/user.jpg" alt="用户头像" class="uploader-img">
                     <span class="uploader-name"><%=pic.getUsername()%></span>
                     <span class="origin">原创</span>
-                    <a href="javascript:;" class="add-attention">加关注</a>
                 </footer>
             </div>
         </div>

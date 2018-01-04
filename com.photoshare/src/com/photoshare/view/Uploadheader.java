@@ -28,10 +28,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.ArrayUtils;
 
-import com.photoshare.controler.BuildConnection;
-import com.photoshare.controler.CheckPicture;
 import com.photoshare.controler.UpdateUser;
-import com.photoshare.controler.UploadPicture;
 import com.photoshare.model.Picture;
 import com.photoshare.model.User;
 
@@ -70,7 +67,6 @@ public class Uploadheader extends HttpServlet {
 		Connection conn;
 		user=(User)request.getSession().getAttribute("user");
 		conn=(Connection)request.getSession().getAttribute("connection");
-		updater = new UpdateUser(user,conn);
 		Picture picture=new Picture();
 		
 		picture.setUsername(user.getName());
@@ -130,14 +126,15 @@ public class Uploadheader extends HttpServlet {
                 }else
                 {
                 	String info = fileItem.getString();
-                    if(fieldName.equals("username"));
-                    user.setName(info);
-                    if(fieldName.equals("description"));
-                    user.setInfo(info);
+                	System.out.println(fieldName+" "+info);
+                    if(fieldName.equals("description"))
+                    	user.setInfo(java.net.URLDecoder.decode(info,"utf-8"));
                 }
                 
             }	
+			updater = new UpdateUser(user,conn);
 			updater.updateInfo();
+			request.getSession().setAttribute("user", user);
 			response.setCharacterEncoding("UTF-8");
 			response.setContentType("application/json; charset=utf-8"); 
 			JSONObject data = new JSONObject();

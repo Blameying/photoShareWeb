@@ -1,5 +1,6 @@
 package com.photoshare.controler;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -8,8 +9,9 @@ import com.photoshare.model.Picture;
 public class DeletePicture extends DBconnect {
 	private Picture picture;
 
-	public DeletePicture(Picture picture){
+	public DeletePicture(Picture picture,Connection conn){
 		this.picture=picture;
+		this.setConnection(conn);
 		delete(picture);
 	}
 	

@@ -83,15 +83,15 @@
                 <a href="javascript:;" class="user-name">登录</a>
                 <img src="img/login.png" alt="默认头像" title="默认头像" class="default-img">
             <%}else{%>
-            	<a href="./userManage.jsp">
+            	<a class="user-photo" href="./userManageCombine.jsp" style="display:inline-block; width:150px; height:50px;">
             	<%
-            		String path="image/"+user.getName()+"/head/user.jpg";
+            		String path=this.getServletContext().getRealPath("/")+"images/"+user.getName()+"/head/user.jpg";
             		File file = new File(path);
             		if(file.exists()){
             	%>
-                <img src="image/<%=user.getName()%>/head/user.jpg" alt="用户头像" title="用户头像" class="user-img">
+                <img src="images/<%=user.getName()%>/head/user.jpg" alt="用户头像" title="用户头像" class="user-img" style="display:inline-block;">
                 <%}else{ %>
-                <img src="img/user.jpg" alt="用户头像" title="用户头像" class="user-img">
+                <img src="img/user.jpg" alt="用户头像" title="用户头像" class="user-img" style="display:inline-block;">
                 <%} %>
                 </a>
             <%}%>
@@ -168,6 +168,7 @@
                     if (data.success == true) {
                         //定义登录成功后的操作
                     	alert(data.message);
+                        location.reload();
                     } else {
                         alert(data.message);
                     }
@@ -200,6 +201,7 @@
                     if (data.success == true) {
                         //定义登录成功后的操作
                     	alert(data.message);
+                    	location.reload();
                     } else {
                         alert(data.message);
                     }

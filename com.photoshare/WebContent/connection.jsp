@@ -3,7 +3,7 @@
 <% 
 	Connection conn=(Connection)request.getSession().getAttribute("connection");
 	if(conn==null){
-		BuildConnection build =new BuildConnection("jdbc:mysql://localhost:3306/photoweb", "root", "nihao@@");
+		BuildConnection build =new BuildConnection("jdbc:mysql://localhost:3306/photoweb?useUnicode=true&characterEncoding=utf-8", "root", "nihao@@");
 		request.getSession().setAttribute("connection", build.getConnection());
 		conn=(Connection)request.getSession().getAttribute("connection");
 	}

@@ -6,8 +6,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.math.BigInteger;
+import java.net.URLDecoder;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.sql.Connection;
 import java.util.Iterator;
 import java.util.List;
 
@@ -63,10 +65,12 @@ public class Upload extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("uploadfiles");
 		User user;
 		String filepath=null;
 		
 		user=(User)request.getSession().getAttribute("user");
+		Connection conn=(Connection)request.getSession().getAttribute("connection");
 		Picture picture=new Picture();
 		
 		picture.setUsername(user.getName());
@@ -119,21 +123,21 @@ public class Upload extends HttpServlet {
                     }  
                 } else { //Form表单数据  
                      String info = fileItem.getString();
-                     if(fieldName.equals("name"));
-                     	picture.setPicname(info);
-                     if(fieldName.equals("description"));
-                     	picture.setDescription(info);
+                     if(fieldName.equals("name"))
+                     	picture.setPicname(java.net.URLDecoder.decode(info,"utf-8"));
+                     if(fieldName.equals("description"))
+                     	picture.setDescription(java.net.URLDecoder.decode(info,"utf-8"));
                      if(fieldName.equals("table")){
-                    	 picture.setTable(info);
+                    	 picture.setTable(java.net.URLDecoder.decode(info,"utf-8"));
+                    	 System.out.println("上传"+java.net.URLDecoder.decode(info,"utf-8"));
                      }
                 }
             } 
 			File rename=new File(filepath);
 			System.out.println(filepath);
-			BuildConnection build =new BuildConnection("jdbc:mysql://localhost:3306/photoweb", "root", "nihao@@");
 			if(rename.exists()){
 				picture.setMd5(getFileMD5(rename));
-				CheckPicture check=new CheckPicture(picture,build.getConnection());
+				CheckPicture check=new CheckPicture(picture,conn);
 				if(check.check()==1){
 					rename.delete();
 					response.setCharacterEncoding("UTF-8");
@@ -149,7 +153,7 @@ public class Upload extends HttpServlet {
 					rename.renameTo(new File(uploaddir,picture.getMd5()+"."+picture.getFormat()));
 					System.out.println(uploaddir);
 					UploadPicture uploadpicture=new UploadPicture();
-					uploadpicture.setConnection(build.getConnection());
+					uploadpicture.setConnection(conn);
 					uploadpicture.upload(picture);
 					response.setCharacterEncoding("UTF-8");
 					response.setContentType("application/json; charset=utf-8"); 

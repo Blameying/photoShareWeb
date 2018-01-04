@@ -39,7 +39,7 @@ public class ChangePassword extends HttpServlet {
 			String password = request.getParameter("password");
 			User user=(User)request.getSession().getAttribute("user");
 			user.setPassword(password);
-			Connection conn=(Connection)request.getAttribute("conn");
+			Connection conn=(Connection)request.getSession().getAttribute("connection");
 			UpdateUser updater=new UpdateUser(user,conn);
 			updater.updatePassword();
 			response.setCharacterEncoding("UTF-8");
@@ -51,6 +51,7 @@ public class ChangePassword extends HttpServlet {
 			out.println(data);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			e.printStackTrace();
 			response.setCharacterEncoding("UTF-8");
 			response.setContentType("application/json; charset=utf-8"); 
 			JSONObject data = new JSONObject();

@@ -2,6 +2,7 @@ package com.photoshare.view;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,9 +40,10 @@ public class Rigester extends HttpServlet {
 		// TODO Auto-generated method stub
 		User user = new User();
 		user.setName(request.getParameter("account"));
+		System.out.println(user.getName());
 		user.setPassword(request.getParameter("password"));
-		BuildConnection build =new BuildConnection("jdbc:mysql://localhost:3306/photoweb", "root", "nihao@@");
-		CheckUser check=new CheckUser(user,build.getConnection());
+		Connection conn =(Connection)request.getSession().getAttribute("connection");
+		CheckUser check=new CheckUser(user,conn);
 		if(check.check()!=0){
 			response.setCharacterEncoding("UTF-8");
 			response.setContentType("application/json; charset=utf-8"); 
@@ -51,7 +53,7 @@ public class Rigester extends HttpServlet {
 			PrintWriter out=response.getWriter();
 			out.println(data);
 		}else{
-			new RigesterUser(user,build.getConnection());
+			new RigesterUser(user,conn);
 			if(check.check()!=0){
 				response.setCharacterEncoding("UTF-8");
 				response.setContentType("application/json; charset=utf-8"); 

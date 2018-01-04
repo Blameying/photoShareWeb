@@ -27,7 +27,7 @@
             <div class="navbar-left">
                 <ul class="navbar-list">
                     <li class="navbar-item">
-                        <a href="">首页</a>
+                        <a href="./index.jsp">首页</a>
                     </li>
                     <li class="navbar-item photo-class-nav">
                         <a href="">图片分类</a>
@@ -83,15 +83,15 @@
                 <a href="javascript:;" class="user-name">登录</a>
                 <img src="img/login.png" alt="默认头像" title="默认头像" class="default-img">
             <%}else{%>
-            	<a href="./userManage.jsp">
+            	<a class="user-photo" href="./userManageCombine.jsp" style="display:inline-block; width:150px; height:50px;">
             	<%
-            		String path="image/"+user.getName()+"/head/user.jpg";
+            		String path=this.getServletContext().getRealPath("/")+"images/"+user.getName()+"/head/user.jpg";
             		File file = new File(path);
             		if(file.exists()){
             	%>
-                <img src="image/<%=user.getName()%>/head/user.jpg" alt="用户头像" title="用户头像" class="user-img">
+                <img src="images/<%=user.getName()%>/head/user.jpg" alt="用户头像" title="用户头像" class="user-img" style="display:inline-block;">
                 <%}else{ %>
-                <img src="img/user.jpg" alt="用户头像" title="用户头像" class="user-img">
+                <img src="img/user.jpg" alt="用户头像" title="用户头像" class="user-img" style="display:inline-block;">
                 <%} %>
                 </a>
             <%}%>
@@ -110,7 +110,7 @@
         <div class="box">
             <div class="pic">
                 <a href="./photoDetails.jsp?id=<%=pic.getId()%>">
-                    <img src="image/<%=pic.getUsername()%>/<%=pic.getMd5()%>.<%=pic.getFormat()%>">
+                    <img src="images/<%=pic.getUsername()%>/<%=pic.getMd5()%>.<%=pic.getFormat()%>">
                 </a>
             </div>
         </div>

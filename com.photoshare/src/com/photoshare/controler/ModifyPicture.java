@@ -9,6 +9,9 @@ public class ModifyPicture extends DBconnect {
 	private String description;
 	private Picture picture;
 
+	public ModifyPicture(){
+		
+	}
 	public ModifyPicture(Picture picture,String description){
 		this.picture=picture;
 		this.description=description;
